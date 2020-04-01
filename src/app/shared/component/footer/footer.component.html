@@ -1,0 +1,27 @@
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="footer-newsletter">
+            <h1>newsletter <i class="mdi mdi-heart"></i></h1>
+            <p>Entérate antes que nadie de las mejores promociones, nuevos estilos, tendencias del momento y mucho más…
+            </p>
+        </div>
+
+        <div class="box">
+            <mat-form-field color="warn" class="full-width">
+                <input [formControl]="emailField" matInput placeholder="Correo" type="email">
+            </mat-form-field>
+
+            <button [disabled]="emailField.invalid" mat-raised-button color="warn">Suscribirse
+            </button>
+        </div>
+
+        <div class="social">
+            <a href=""><i class="mdi mdi-whatsapp"></i></a>
+            <a href=""><i class="mdi mdi-facebook"></i></a>
+            <a href=""><i class="mdi mdi-twitter"></i></a>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2020 BRESKA</p>
+    </div>
+</footer>

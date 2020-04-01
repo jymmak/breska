@@ -1,0 +1,158 @@
+$white: #ffffff;
+$font_family_1: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$black: #000000;
+$gray_dark: #333;
+
+.burger-button {
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 9px;
+  top: 45px;
+  color: $white;
+  display: none;
+}
+header {
+  background-color: $black;
+  color: $white;
+  height: auto;
+  font-size: 12px;
+  font-family: $font_family_1;
+  .options-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .search {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      i {
+        font-size: 25px;
+        margin-right: 10px;
+        position: relative;
+        top: 5px;
+      }
+      input[type="search"] {
+        width: 100%;
+        background: none;
+        border-bottom: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        transition: all 0.2s ease;
+        color: $white;
+      }
+      input[type="search"]:focus {
+        outline: 0;
+        width: 200px;
+      }
+      input::placeholder {
+        color: $white;
+        font-size: 1em;
+      }
+    }
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .logo{
+      margin: 0;
+      img {
+        height: 60px;
+      }
+    }
+    .menu {
+      height: inherit;
+    }
+  }
+  .options-nav {
+    border-bottom: 1px solid $gray_dark;
+  }
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: inherit;
+    li {
+      height: inherit;
+      font-size: 12px;
+    }
+  }
+  a {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $white;
+    display: inline-block;
+    padding: 10px 0;
+    margin: 0 10px;
+    position: relative;
+    width: auto;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    i {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .burger-button {
+    display: block;
+  }
+  header {
+    display: block;
+    height: auto;
+
+    a {
+      justify-content: center;
+      text-decoration: underline;
+      i {
+        font-size: 10px;
+      }
+    }
+
+    .options-nav {
+      justify-content: flex-end;
+      .search {
+        display: none;
+      }
+    }
+    .main-nav {
+      display: block;
+      .logo {
+        text-align: center;
+        img {
+          height: 40px;
+        }
+      }
+      .menu {
+        position: fixed;
+        background: rgba(5, 111, 255, 0.9);
+        z-index: 3;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        ol {
+          display: block;
+          li {
+            height: 50px;
+          }
+        }
+      }
+      &.is-active {
+        left: 0;
+      }
+    }
+  }
+}
