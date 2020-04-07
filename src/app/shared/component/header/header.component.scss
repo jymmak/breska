@@ -5,7 +5,7 @@ $gray_dark: #333;
 
 .burger-button {
   text-align: center;
-  position: fixed;
+  position: absolute;
   z-index: 4;
   left: 9px;
   top: 45px;
@@ -60,7 +60,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    .logo{
+    .logo {
       margin: 0;
       img {
         height: 60px;
