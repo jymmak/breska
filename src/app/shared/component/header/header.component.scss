@@ -8,7 +8,7 @@ $gray_dark: #333;
   position: absolute;
   z-index: 4;
   left: 9px;
-  top: 45px;
+  top: 52px;
   color: $white;
   display: none;
 }
@@ -72,6 +72,9 @@ header {
   }
   .options-nav {
     border-bottom: 1px solid $gray_dark;
+    ol {
+      padding: 20px 20px 0 20px;
+    }
   }
   ol {
     margin: 0;
@@ -89,7 +92,6 @@ header {
     letter-spacing: 0.2em;
     color: $white;
     display: inline-block;
-    padding: 10px 0;
     margin: 0 10px;
     position: relative;
     width: auto;
@@ -113,7 +115,7 @@ header {
       justify-content: center;
       text-decoration: underline;
       i {
-        font-size: 10px;
+        font-size: 18px;
       }
     }
 
@@ -124,9 +126,9 @@ header {
       }
     }
     .main-nav {
+      text-align: center;
       display: block;
       .logo {
-        text-align: center;
         img {
           height: 40px;
         }

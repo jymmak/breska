@@ -1,5 +1,5 @@
 <i class="mdi mdi-menu burger-button" id="burger-menu"></i>
-<header >
+<header>
   <div class="options-nav">
     <div class="search">
       <i class="mdi mdi-magnify" aria-hidden="true"></i>
@@ -8,37 +8,41 @@
 
     <ol>
       <li>
-        <a  href=""> <i class="mdi mdi-account"></i></a>
+        <a routerLink=""> <i class="mdi mdi-account"></i></a>
       </li>
       <li>
-        <a  href=""> <i class="mdi mdi-heart"></i></a>
+        <a routerLink=""> <i class="mdi mdi-heart"></i></a>
       </li>
       <li>
-        <a  href=""> <i class="mdi mdi-cart"></i></a>
+
+        <a routerLink="/order"  matBadge="15" matBadgeColor="warn">
+          <i class="mdi mdi-cart"></i>
+        </a> 
+      
       </li>
     </ol>
 
   </div>
   <div class="main-nav">
-    <figure class="logo">
+    <a class="logo" routerLink="/home">
       <img src="assets/images/image_logo.png" alt="Logo" />
-    </figure>
+    </a>
     <nav class="menu">
       <ol>
         <li>
-          <a class="link" href="">Novedades</a>
+          <a class="link" routerLink="/products">Novedades</a>
         </li>
         <li>
-          <a class="link" href="">Mujer</a>
+          <a class="link" routerLink="/fashion-woman">Mujer</a>
         </li>
         <li>
-          <a class="link" href="">Hombre</a>
+          <a class="link" routerLink="/fashion-man">Hombre</a>
         </li>
         <li>
-          <a class="link" href="">Niños</a>
+          <a class="link" routerLink="/fashion-children">Niños</a>
         </li>
         <li>
-          <a class="link" href="">Accesorios</a>
+          <a class="link" routerLink="/prod-acc">Accesorios</a>
         </li>
 
       </ol>

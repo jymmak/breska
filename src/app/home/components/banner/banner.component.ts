@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import Swiper from 'swiper'
+declare var $: any;
 
 @Component({
   selector: 'app-banner',
@@ -8,7 +8,7 @@ import Swiper from 'swiper'
 })
 export class BannerComponent implements OnInit, AfterViewInit {
   public images: Array<any>;
-  mySwiper: Swiper;
+
 
   constructor() { }
 
@@ -17,26 +17,27 @@ export class BannerComponent implements OnInit, AfterViewInit {
       'assets/images/image1.jpg',
       'assets/images/image2.jpg',
       'assets/images/image3.jpg',
+      'assets/images/image4.jpg',
       'assets/images/image6.jpg',
+      'assets/images/image7.jpg',
     ];
 
   }
 
   ngAfterViewInit() {
-    this.mySwiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-    })
+    $(document).ready(function () {
+      $('.slick').slick({
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        arrows: true,
+        fade: true,
+        responsive: true
+      });
+    });
   }
-
-
-
 }

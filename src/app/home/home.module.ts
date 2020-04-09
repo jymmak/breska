@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 import { BannerComponent } from './components/banner/banner.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { SharedModule } from '../shared/shared.module';
-;
+import { MainProductsComponent } from './main-products/main-products.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
 @NgModule({
-  declarations: [BannerComponent, HomeComponent],
+  declarations: [BannerComponent, HomeComponent, MainProductsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    MaterialModule
   ]
 })
 export class HomeModule { }

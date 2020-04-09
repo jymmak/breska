@@ -1,0 +1,89 @@
+.list-products {
+    .section-title {
+        margin: 0 0 40px;
+        padding: 40px;
+        text-align: center;
+        h2 {
+            font-family: "AvenirNext LT Pro";
+            background: #ffffff;
+            color: #333;
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-transform: uppercase;
+            display: inline-flex;
+        }
+    }
+    .section-title:after {
+        background: #ccc;
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin-top: -60px;
+    }
+
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 3rem;
+        .card {
+            margin: 1%;
+            width: 20%;
+            flex-shrink: 0;
+            overflow: hidden;
+            box-shadow: none;
+            img {
+                height: auto;
+                object-fit: cover;
+            }
+            .actions {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    .container-product {
+        max-width: 1300px;
+        flex: 1;
+        margin: 0 auto;
+        display: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        height: inherit;
+        flex-wrap: inherit;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 767px) {
+    .section-title {
+        padding: 12px !important;
+        h2 {
+            font-size: 20px !important;
+        }
+    }
+    .section-title:after {
+        margin-top: -52px !important;
+    }
+    .product {
+        .card {
+            margin: 5% !important;
+            width: 80% !important;
+            .mat-card-title {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .product {
+        .card {
+            margin: 3% !important;
+            width: 24% !important;
+        }
+    }
+}

@@ -1,13 +1,15 @@
 $white: #ffffff;
+$gray_white:  #fafafa;
 $gray_dark: #333;
 
+
 .footer {
-    background: $white;
+    background: $gray_white;
     color: $gray_dark;
     overflow: hidden;
     height: auto;
     text-align: center;
-    padding: 60px 0 0 0;
+    padding: 60px 0 10px 0;
 
     .footer-newsletter {
         h1 {
@@ -20,10 +22,20 @@ $gray_dark: #333;
             margin: 10px auto 20px;
         }
     }
+    .box {
+        .btn-suscribe {
+            background-color: $gray_dark;
+            color: $white;
+        }&:hover{
+            transition: all 150ms linear;
+
+            opacity: .85;
+        }
+    }
     .social {
         a {
             font-size: 25px;
-            color: #333;
+            color: $gray_dark;
             opacity: 1;
             -webkit-transition: all 0.3s ease-in-out 0s;
             transition: all 0.3s ease-in-out 0s;
@@ -31,7 +43,7 @@ $gray_dark: #333;
         }
     }
     .copyright {
-        padding: 40px 0 10px;
+        padding: 50px 0 10px;
         text-align: center;
         font-size: 12px;
     }

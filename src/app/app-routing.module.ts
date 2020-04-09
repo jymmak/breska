@@ -14,6 +14,27 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path: 'products',
+        loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
+      },
+      
+      {
+        path: 'fashion-woman',
+        loadChildren: () => import('./product-woman/product-woman.module').then(m => m.ProductWomanModule)
+      },
+      {
+        path: 'fashion-man',
+        loadChildren: () => import('./product-man/product-man.module').then(m => m.ProductManModule)
+      },
+      {
+        path: 'fashion-children',
+        loadChildren: () => import('./product-children/product-children.module').then(m => m.ProductChildrenModule)
+      },
+      {
+        path: 'prod-acc',
+        loadChildren: () => import('./product-acc/product-acc.module').then(m => m.ProductAccModule)
       }
     ]
   }

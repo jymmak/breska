@@ -28,7 +28,7 @@
     "jquery": "^3.4.1",
     "material-design-icons": "^3.0.1",
     "rxjs": "~6.5.4",
-    "swiper": "^5.3.6",
+    "slick-carousel": "^1.8.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
