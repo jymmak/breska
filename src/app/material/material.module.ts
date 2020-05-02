@@ -15,6 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -22,6 +23,9 @@ import { MatBadgeModule } from '@angular/material/badge';
   imports: [
     CommonModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatBadgeModule,
     MatCardModule,
     MatInputModule,
     MatSelectModule,
@@ -34,11 +38,13 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatGridListModule,
     MatMenuModule,
     MatStepperModule,
-    MatIconModule,
-    MatBadgeModule
   ],
   exports: [
+    CommonModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatBadgeModule,
     MatCardModule,
     MatInputModule,
     MatSelectModule,
@@ -50,9 +56,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatSortModule,
     MatGridListModule,
     MatMenuModule,
-    MatStepperModule,  
-    MatIconModule,
-    MatBadgeModule,
+    MatStepperModule,
   ]
 })
 export class MaterialModule { }
