@@ -1,0 +1,21 @@
+<h3>Crea un producto</h3>
+<div>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name" required>
+        </div>
+        <div class="form-group">
+            <label for="price">Precio</label>
+            <input type="text" class="form-control" id="price" name="price" [(ngModel)]="product.price" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción</label>
+            <input type="text" class="form-control" id="description" name="description" [(ngModel)]="product.description" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+
+
+    </form>
+</div>
