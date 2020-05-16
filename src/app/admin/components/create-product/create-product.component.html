@@ -1,5 +1,5 @@
 <div class="container">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <form [formGroup]="form" (ngSubmit)="save($event)">
         <mat-card class="shipping-card">
             <mat-card-header>
                 <mat-card-title>Crea tu producto</mat-card-title>
@@ -8,18 +8,21 @@
                 <div class="row">
                     <div class="col-xs">
                         <mat-form-field>
-                            <input placeholder="nombre"  type="text" class="form-control" matInput  formControlName="name" [(ngModel)]="product.name">
+                            <input placeholder="nombre" type="text" class="form-control" matInput
+                                formControlName="name">
                         </mat-form-field>
                     </div>
 
                     <div class="col-xs">
                         <mat-form-field>
-                            <input placeholder="descripción"  type="text" class="form-control" matInput  formControlName="description" [(ngModel)]="product.description"> 
+                            <input placeholder="descripción" type="text" class="form-control" matInput
+                                formControlName="description">
                         </mat-form-field>
                     </div>
                     <div class="col-xs">
                         <mat-form-field>
-                            <input placeholder="precio" type="text" class="form-control" matInput  formControlName="price" [(ngModel)]="product.price">
+                            <input placeholder="precio" type="text" class="form-control" matInput
+                                formControlName="price">
                         </mat-form-field>
                         <div *ngIf="priceField.errors && priceField.dirty">
                             <p *ngIf="priceField.hasError('price_invalid')">no te debes pasar de 10000</p>
@@ -27,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-              
+
             </mat-card-content>
             <mat-card-actions>
                 <button mat-raised-button color="primary" type="submit">Guardar</button>

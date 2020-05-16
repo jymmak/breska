@@ -12,8 +12,7 @@ import { MyValidators } from 'src/app/utils/validators';
 })
 export class CreateProductComponent implements OnInit {
   form: FormGroup;
-  product: Product = new Product();
-  submitted = false;
+
 
   constructor(
     private router: Router,
@@ -25,17 +24,20 @@ export class CreateProductComponent implements OnInit {
   ngOnInit() {
   }
 
-  save() {
-    this.productService.createProduct(this.product)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.product = new Product();
-    this.router.navigate(['./admin/products-list']);
+
+  save(event: Event) {
+    event.preventDefault();
+    if (this.form.valid) {
+      const product = this.form.value;
+      this.productService.createProduct(product)
+        .subscribe((newProduct) => {
+          console.log(newProduct);
+          this.router.navigate(['./admin/products-list']);
+        });
+    }
   }
 
-  onSubmit() {
-    this.submitted = true;
-    this.save();
-  }
+
 
   private buildForm() {
     this.form = this.formBuilder.group({

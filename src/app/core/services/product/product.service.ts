@@ -1,21 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Product } from 'src/app/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'http://localhost:8080/api/products';
+
   constructor(private http: HttpClient) { }
 
 
   getProduct(id: number): Observable<Object> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+    return this.http.get<Product>(`${environment.url_api}/products/${id}`);
   }
 
-  createProduct(product: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}` + `/create`, product);
+  createProduct(product: Product): Observable<Object> {
+    return this.http.post(`${environment.url_api}` + `/create`, product);
   }
 
 }
