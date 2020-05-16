@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     SharedModule,
     FormsModule,
-    BrowserAnimationsModule,
+        BrowserAnimationsModule,
     HttpClientModule
   ],
   providers: [],

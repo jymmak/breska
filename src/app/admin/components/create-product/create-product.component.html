@@ -1,21 +1,38 @@
-<h3>Crea un producto</h3>
-<div>
-    <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name" required>
-        </div>
-        <div class="form-group">
-            <label for="price">Precio</label>
-            <input type="text" class="form-control" id="price" name="price" [(ngModel)]="product.price" required>
-        </div>
-        <div class="form-group">
-            <label for="description">Descripción</label>
-            <input type="text" class="form-control" id="description" name="description" [(ngModel)]="product.description" required>
-        </div>
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-card class="shipping-card">
+            <mat-card-header>
+                <mat-card-title>Crea tu producto</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-xs">
+                        <mat-form-field>
+                            <input placeholder="nombre"  type="text" class="form-control" matInput  formControlName="name" [(ngModel)]="product.name">
+                        </mat-form-field>
+                    </div>
 
-        <button type="submit" class="btn btn-success">Submit</button>
-
+                    <div class="col-xs">
+                        <mat-form-field>
+                            <input placeholder="descripción"  type="text" class="form-control" matInput  formControlName="description" [(ngModel)]="product.description"> 
+                        </mat-form-field>
+                    </div>
+                    <div class="col-xs">
+                        <mat-form-field>
+                            <input placeholder="precio" type="text" class="form-control" matInput  formControlName="price" [(ngModel)]="product.price">
+                        </mat-form-field>
+                        <div *ngIf="priceField.errors && priceField.dirty">
+                            <p *ngIf="priceField.hasError('price_invalid')">no te debes pasar de 10000</p>
+                            <p *ngIf="priceField.hasError('required')">el campo es requerido</p>
+                        </div>
+                    </div>
+                </div>
+              
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit">Guardar</button>
+            </mat-card-actions>
+        </mat-card>
 
     </form>
 </div>
