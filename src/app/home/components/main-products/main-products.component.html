@@ -1,12 +1,16 @@
-<div id="fashion-woman" class="list-products">
+<div id="list-products" class="list-products">
+
+    <div class="section-title">
+        <h2>{{title}}</h2>
+    </div>
     <div class="product">
         <div class="container-product">
-            <mat-card class="example-card card" *ngFor="let item of mainProducts">
+            <mat-card class="example-card card" *ngFor="let product of products">
                 <div class="drop-image">
-                    <img mat-card-image [src]="item.image" alt="">
+                    <img mat-card-image src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3.jpg" alt="">
                 </div>
-                <mat-card-title>{{ item.title}}</mat-card-title>
-                <mat-card-subtitle>S/{{ item.price}}</mat-card-subtitle>
+                <mat-card-title>{{ product.name}}</mat-card-title>
+                <mat-card-subtitle>S/{{ product.price}}</mat-card-subtitle>
                 <mat-card-actions class="actions">
 
                     <button type="submit" mat-raised-button color="warn">

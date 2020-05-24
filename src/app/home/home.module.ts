@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BannerComponent } from './components/banner/banner.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { MainProductsComponent } from './main-products/main-products.component';
 import { MaterialModule } from '../material/material.module';
-
+import { MainProductsComponent } from './components/main-products/main-products.component';
 
 
 @NgModule({

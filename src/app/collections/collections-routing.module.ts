@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WomenComponent } from './components/women/women.component';
-import { MenComponent } from './components/men/men.component';
-import { AccComponent } from './components/acc/acc.component';
-import { ChildrenComponent } from './components/children/children.component';
-import { NewsComponent } from './components/news/news.component';
+
+import { NewsComponent } from './containers/news/news.component';
+import { WomenComponent } from './containers/women/women.component';
+import { MenComponent } from './containers/men/men.component';
+import { ChildrenComponent } from './containers/children/children.component';
+import { AccComponent } from './containers/acc/acc.component';
+
+
 
 
 const routes: Routes = [

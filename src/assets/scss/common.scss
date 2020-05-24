@@ -15,17 +15,12 @@ body,
 .container {
     max-width: 1000px;
     flex: 1;
-
     display: inherit;
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
     flex-wrap: inherit;
     width: 100%;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .product-grid {
@@ -33,14 +28,14 @@ body,
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 50px 20px;
 }
-
+.mdi:before {
+    float: right;
+}
 @media (min-width: 576px) {
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
     }
     .container {
         max-width: 1110px;
-        padding-right: 16px;
-        padding-left: 16px;
     }
 }

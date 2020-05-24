@@ -1,0 +1,20 @@
+<div class="product">
+    <div class="container-product">
+        <mat-card class="example-card card">
+            <div class="drop-image">
+                <img mat-card-image src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3.jpg" alt="">
+            </div>
+            <mat-card-title>{{ product.name}}</mat-card-title>
+            <mat-card-subtitle>S/{{ product.price}}</mat-card-subtitle>
+            <mat-card-actions class="actions">
+
+                <button type="submit" mat-raised-button color="warn">
+                    Comprar
+                </button>
+                <a [routerLink]=""><i class="mdi mdi-heart-outline"></i></a>
+
+            </mat-card-actions>
+        </mat-card>
+
+    </div>
+</div>
