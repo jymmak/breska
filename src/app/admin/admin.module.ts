@@ -28,7 +28,7 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     LayoutModule,
     FormsModule,
-    CommonModule  
+    CommonModule
   ]
 })
 export class AdminModule { }

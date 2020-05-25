@@ -12,14 +12,13 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getAllProducts() {
-    return this.http.get<Product[]>(`${environment.url_api}/`);
+    return this.http.get<Product[]>(`${environment.url_api}`);
   }
-  getProduct(id: number): Observable<Object> {
-    return this.http.get<Product>(`${environment.url_api}/products/${id}`);
-  }
-
-  createProduct(product: Product): Observable<Object> {
+   createProduct(product: Product): Observable<Object> {
     return this.http.post(`${environment.url_api}` + `/create`, product);
   }
-
+  deleteProduct(id: number): Observable<any> {
+    return this.http.delete(`${environment.url_api}/${id}`, { responseType: 'text' });
+  }
+z
 }

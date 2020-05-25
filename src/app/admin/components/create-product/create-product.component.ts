@@ -24,7 +24,6 @@ export class CreateProductComponent implements OnInit {
   ngOnInit() {
   }
 
-
   save(event: Event) {
     event.preventDefault();
     if (this.form.valid) {
@@ -36,8 +35,6 @@ export class CreateProductComponent implements OnInit {
         });
     }
   }
-
-
 
   private buildForm() {
     this.form = this.formBuilder.group({
